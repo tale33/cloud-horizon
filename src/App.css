@@ -1,34 +1,86 @@
-.App {
-  text-align: center;
+body { background-color: #ececec; }
+
+.lightGray { color: #a7a7a7; }
+
+.darkGray { color: #1b1b1b; }
+
+a { text-decoration: none; }
+
+a.lightGray:hover { text-decoration: underline; }
+
+.loading {
+  margin: 0 20px;
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.list {
+  background-color: #fdfdfe;
+  margin: 0 20px;
+  padding-top: 20px;
+}
+
+.list li:after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: #dedede;
+  margin: 10px 0;
+  margin-left: -25px;
+}
+
+.header {
+  background-color: #f48b23;
+  min-height: 12.6vh;
+  display: block;
+  color: #000;
+  /*flex-direction: column;*/
+  /*align-items: baseline;*/
+  /*justify-content: center;*/
+  font-size: calc(5px + 2vmin);
+}
+
+.footer {
+  padding: 10px 0 30px 20px;
+}
+
+h1 {
+  float: left;
+}
+
+button.refresh {
+  position: relative;
+  top: calc(25px + 2vmin);
+  padding: 0 25px;
+  float: right;
+  background: transparent;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+img {
+  height: 30px;
+  width: 38px;
+}
+
+.message {
+  text-align: center;
+  padding: calc(100px + 2vh);
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .refresh {
+    animation: refresh-spin infinite 10s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes refresh-spin {
   from {
     transform: rotate(0deg);
   }
